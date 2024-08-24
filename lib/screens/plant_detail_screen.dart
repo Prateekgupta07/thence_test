@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thence_test/utils/widgets.dart';
 import '../models/plant_model.dart';
 
 class PlantDetailPage extends StatelessWidget {
@@ -72,47 +73,16 @@ class PlantDetailPage extends StatelessWidget {
                         const SizedBox(height: 20),
                         const Text(
                           'Choose size',
-                          style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700),
+                          style: TextStyle(
+                              fontSize: 13, fontWeight: FontWeight.w700),
                         ),
                         const SizedBox(height: 8),
-                        SizedBox(
-                          height: 32,
-                          child: ListView.separated(
-                            scrollDirection: Axis.horizontal,
-                            itemCount: plant.availableSize.length,
-                            itemBuilder: (context, index) {
-                              return Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 5, horizontal: 15),
-                                  decoration: BoxDecoration(
-                                      color: index == 1
-                                          ? const Color(0xFFB08888)
-                                          : const Color(0XFFF4F4F4),
-                                      borderRadius: BorderRadius.circular(10)),
-                                  child: Center(
-                                    child: Text(
-                                      "${plant.availableSize[index]} cm",
-                                      style: TextStyle(
-                                          fontSize: 13,
-                                          fontWeight: FontWeight.w600,
-                                          color: index != 1
-                                              ? const Color(0xFF000000)
-                                              .withOpacity(0.4)
-                                              : Colors.white),
-                                    ),
-                                  ));
-                            },
-                            separatorBuilder: (BuildContext context, int index) {
-                              return const SizedBox(
-                                width: 10,
-                              );
-                            },
-                          ),
-                        ),
+                        horizontal_listview(plant.availableSize),
                         const SizedBox(height: 20),
                         const Text(
                           'Description',
-                          style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700),
+                          style: TextStyle(
+                              fontSize: 13, fontWeight: FontWeight.w700),
                         ),
                         const SizedBox(height: 8),
                         Text(
@@ -131,8 +101,7 @@ class PlantDetailPage extends StatelessWidget {
             ),
           ),
           Padding(
-            padding:
-            const EdgeInsets.symmetric(vertical: 18.0, horizontal: 24),
+            padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 24),
             child: Row(
               children: [
                 Container(
