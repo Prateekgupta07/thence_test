@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "555239072104",
+    "project_id": "thencetest-64858",
+    "storage_bucket": "thencetest-64858.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555239072104:android:2ab7f3955b2a3297e6f6dd",
+        "android_client_info": {
+          "package_name": "com.thence.thence_test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS2FeQDicwT7NfpEOZfUEYO1eYrfuW74o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
